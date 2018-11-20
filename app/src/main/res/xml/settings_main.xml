@@ -14,4 +14,33 @@
         android:key="@string/settings_min_magnitude_key"
         android:selectAllOnFocus="true"
         android:title="@string/settings_min_magnitude_label" />
+
+    <EditTextPreference
+        android:defaultValue="@string/settings_max_magnitude_default"
+        android:inputType="numberDecimal"
+        android:key="@string/settings_max_magnitude_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/settings_max_magnitude_label" />
+
+    <EditTextPreference
+        android:defaultValue="@string/settings_limit_default"
+        android:inputType="numberSigned"
+        android:key="@string/settings_limit_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/settings_limit_label" />
+
+    <EditTextPreference
+        android:defaultValue="@string/settings_starttime_default"
+        android:inputType="datetime"
+        android:key="@string/settings_starttime_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/settings_starttime_label" />
+
+    <EditTextPreference
+        android:defaultValue="@string/settings_endtime_default"
+        android:inputType="datetime"
+        android:key="@string/settings_endtime_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/settings_endtime_label" />
+
 </PreferenceScreen>

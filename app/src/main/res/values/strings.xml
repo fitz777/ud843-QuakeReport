@@ -30,10 +30,22 @@
     <string name="settings_min_magnitude_key" translatable="false">min_magnitude</string>
     <string name="settings_min_magnitude_default" translatable="false">6</string>
 
+    <!-- Strings For Maximum Magnitude Preference [CHAR LIMIT=30] -->
+    <string name="settings_max_magnitude_label">Maximum Magnitude</string>
+    <string name="settings_max_magnitude_key" translatable="false">max_magnitude</string>
+    <string name="settings_max_magnitude_default" translatable="false">8</string>
+
+    <!-- Strings For Limit Preference [CHAR LIMIT=30] -->
+    <string name="settings_limit_default">10</string>
+    <string name="settings_limit_key">limit</string>
+    <string name="settings_limit_label">Limit</string>
+
     <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
     <string name="settings_order_by_label">Order By</string>
     <string name="settings_order_by_key" translatable="false">order_by</string>
     <string name="settings_order_by_default" translatable="false">@string/settings_order_by_magnitude_value</string>
+
+
 
     <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
     <string name="settings_order_by_magnitude_label">Magnitude</string>
@@ -42,4 +54,14 @@
     <!-- Label for order-by most recent option [CHAR LIMIT=20] -->
     <string name="settings_order_by_most_recent_label">Most Recent</string>
     <string name="settings_order_by_most_recent_value" translatable="false">time</string>
+
+    <string name="settings_starttime_default">2018-11-15</string>
+    <string name="settings_starttime_key">starttime</string>
+    <string name="settings_starttime_label">Start Time</string>
+
+    <string name="settings_endtime_default">2019-11-15</string>
+    <string name="settings_endtime_key">endtime</string>
+    <string name="settings_endtime_label">End Time</string>
+
+
 </resources>

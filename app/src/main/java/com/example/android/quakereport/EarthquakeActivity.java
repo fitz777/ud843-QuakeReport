@@ -118,9 +118,26 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
         Log.e(LOG_TAG, "onCreateLoader");
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         String minMagnitude = sharedPrefs.getString(
                 getString(R.string.settings_min_magnitude_key),
                 getString(R.string.settings_min_magnitude_default));
+
+        String maxMagnitude = sharedPrefs.getString(
+                getString(R.string.settings_max_magnitude_key),
+                getString(R.string.settings_max_magnitude_default));
+
+        String limit = sharedPrefs.getString(
+                getString(R.string.settings_limit_key),
+                getString(R.string.settings_limit_default));
+
+        String starttime = sharedPrefs.getString(
+                getString(R.string.settings_starttime_key),
+                getString(R.string.settings_starttime_default));
+
+        String endtime = sharedPrefs.getString(
+                getString(R.string.settings_endtime_key),
+                getString(R.string.settings_endtime_default));
 
         String orderBy = sharedPrefs.getString(
                 getString(R.string.settings_order_by_key),
@@ -131,8 +148,11 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         uriBuilder.appendQueryParameter("format", "geojson");
-        uriBuilder.appendQueryParameter("limit", "10");
         uriBuilder.appendQueryParameter("minmag", minMagnitude);
+        uriBuilder.appendQueryParameter("maxmag", maxMagnitude);
+        uriBuilder.appendQueryParameter("limit", limit);
+        uriBuilder.appendQueryParameter("starttime", starttime);
+        uriBuilder.appendQueryParameter("endtime", endtime);
         uriBuilder.appendQueryParameter("orderby", orderBy);
 
         return new EarthquakeLoader(this, uriBuilder.toString());
